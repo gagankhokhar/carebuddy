@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<meta name="viewport" content="width=device-width">
+		<script src="slick/jquery-1.11.3.min.js"></script>
+		<script src="js/active.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui.min.css">
+		<script type="text/javascript" src="js/highslide-with-gallery.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/highslide.css" />
+	</head>
+	<body style="overflow: hidden;">
+		<div class="carebuddy chat">
+			<div class="top-header-back header-fixed">
+				<div class="container">
+					<div class="back-icon">
+						<a href="#"><i class="mdi mdi-menu"></i></a>
+					</div>
+					<div class="page-name">
+						<h2>Chat</h2>
+					</div>
+					<div class="right-icon">
+						<a href="emergency.html"><img src="images/heart-pulse.png" alt=""></a>
+						<a href="#"><i class="mdi mdi-dots-vertical"></i></a>
+					</div>
+					<div class="top-dots">
+						<div class="popup">
+							<a href="#"><h2>Notification</h2></a>
+							<a href="#"><h2>Refresh Chat</h2></a>
+							<a href="#"><h2>Emergency</h2></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-img-chat">
+				
+			</div>
+			<div class="user-chat">
+				<div class="chat-body">
+					<div class="all-chat">
+						<div class="chat-from-user">
+							<div class="chat-msg-from-user">
+								<div class="chat-txt">
+									<p>Text</p>
+								</div>
+							</div>
+							<div class="chat-msg-from-user">
+								<div class="chat-txt">
+									<p>Hello there ,thanks for using our app</p>
+								</div>
+							</div>
+						</div>
+						<div class="chat-from-cb">
+							<div class="chat-msg-from-cb">
+								<div class="msg-color">
+									<div class="msg-txt"></div>
+									<div class="msg-date"></div>
+									<img src="images/user-img.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="all-chat">
+						<div class="chat-user">
+							<div class="chat-txt">
+								<p>Hello there ,thanks for using our app</p>
+							</div>
+						</div>
+						<div class="chat-user">
+							<div class="chat-txt chat-img">
+								<div class="highslide-gallery">
+									<a href="images/connected.jpg" class="highslide" onclick="return hs.expand(this)">
+										<img src="images/connected.jpg" title="Click to enlarge" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="chat-cb">
+							<div class="chat-txt">
+								<p>Text</p>
+							</div>
+						</div>
+						<div class="chat-cb">
+							<div class="chat-txt">
+								<p>Text</p>
+							</div>
+						</div>
+						<div class="chat-cb">
+							<div class="chat-txt chat-img">
+								<div class="highslide-gallery">
+									<a href="images/az.jpg" class="highslide" onclick="return hs.expand(this)">
+										<img src="images/az.jpg" title="Click to enlarge" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="chat-cb">
+							<div class="chat-txt chat-img">
+								<div class="highslide-gallery">
+									<a href="images/connected.jpg" class="highslide" onclick="return hs.expand(this)">
+										<img src="images/connected.jpg" title="Click to enlarge" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="input-send-msg">
+						<i class="mdi mdi-camera">
+						<input type="file">
+						</i>
+						<input type="text" class="gagan" placeholder="type your message">
+						<i class="mdi mdi-send"></i>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar">
+				<header>
+					<div class="user-img">
+						<img src="images/user-img.png">
+					</div>
+					<div class="user-info">
+						<h2>Gagan</h2>
+						<h4><i class="mdi mdi-map-marker"></i>Chd, India</h4>
+					</div>
+				</header>
+				<div class="nav-list">
+					<ul>
+						<li><a href="#"><i class="mdi mdi-alert-circle"></i>About</a></li>
+						<li><a href="#"><i class="mdi mdi-message"></i>Chat</a></li>
+						<li><a href="#"><i class="mdi mdi-library-books"></i>My Records</a></li>
+						<li><a href="#"><i class="mdi mdi-calendar-check"></i>My Reminders</a></li>
+						<li><a href="#"><i class="mdi mdi-account-multiple"></i>Family Member</a></li>
+						<li><a href="#"><i class="mdi mdi-home-variant"></i>Health care at Home</a></li>
+						<li><a href="#"><i class="mdi mdi-bell-ring"></i>Notification</a></li>
+						<li><a href="#"><i class="mdi mdi-timer-sand"></i>Medical History</a></li>
+						<li><a href="#"><i class="mdi mdi-file-document"></i>Appointments</a></li>
+						<li><a href="#"><i class="mdi mdi-account-plus"></i>Doctor Consultation</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function($) {
+				$('.mdi-menu').click(function() {
+					$('.sidebar').toggleClass('active');
+					$('.chat').toggleClass('active');
+				});
+
+					hs.graphicsDir = 'js/graphics/';
+					hs.align = 'center';
+					hs.transitions = ['expand', 'crossfade'];
+					hs.wrapperClassName = 'dark borderless floating-caption';
+					hs.fadeInOut = true;
+					hs.dimmingOpacity = .75;
+
+					// Add the controlbar
+					if (hs.addSlideshow) hs.addSlideshow({
+						//slideshowGroup: 'group1',
+						interval: 5000,
+						repeat: false,
+						useControls: true,
+						fixedControls: 'fit',
+						overlayOptions: {
+							opacity: .6,
+							position: 'bottom center',
+							hideOnMouseOut: true
+						}
+					});
+			});
+		</script>
+
+	</body>
+</html>
